@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HvZ Archive</title>
+    <meta name="description" content="Humans vs Zombies @ RIT Archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="icon-apple.png" />
+
+    <meta name="theme-color" content="#3A3A3A">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9XILkoivXN+bcvB2kSOowkIvIcBbNdoDQvfBNsxYAIieZbx8/SI4NeUvrRGCpDi" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" integrity="sha256-0JaDbGZRXlzkFbV8Xi8ZhH/zZ6QQM0Y3dCkYZ7JYq34=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="visible-lg visible-md navbar-brand navbar-brand-centered">
+                    <img class="logo" src="images/hvzlogo_small.png" alt="Humans vs Zombies">
+                </div>
+                <div class="visible-xs visible-sm navbar-brand">
+                Humans vs Zombies
+                </div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" onclick="displayIndex()">Index</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="vertical-space"></div>
+        <div class="row">
+            <div id="index-container" class="col-sm-6 col-sm-offset-3"></div>
+        </div>
+        <div id="content-container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 well">
+                    <h2 class="text-center">{{name}}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="well col-sm-5 text-center bg-human large-text">
+                    <h1><strong>{{scores.humans}}</strong></h1>
+                    Humans
+                </div>
+                <div class="col-sm-2 text-center large-text">
+                    <h1>VS</h1>
+                </div>
+                <div class="well col-sm-5 text-center bg-zombie large-text">
+                    <h1><strong>{{scores.zombies}}</strong></h1>
+                    Zombies
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 well text-center">
+                    <h1>Winners</h1>
+                    {{#each scores.winners}}
+                        <h3>{{this}}</h3>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="vertical-space"></div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h1 class="text-center">Missions</h2>
+                </div>
+            </div>
+            {{#each missions}}
+                <div class="row">
+                    <div class="well col-sm-10 col-sm-offset-1">
+                        {{#if zombie}}
+                            <h2 class="text-center bg-zombie" style="color: white;">{{title}}</h2>
+                        {{else if human}}
+                            <h2 class="text-center bg-human" style="color: white;">{{title}}</h2>
+                        {{else}}
+                            <h2 class="text-center" style="color: white;">{{title}}</h2>
+                        {{/if}}
+                        <div>
+                            {{{body}}}
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical-space"></div>
+            {{/each}}
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr>
+                    <p class="text-muted pull-right">
+                        Copyright &copy; 2017 | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

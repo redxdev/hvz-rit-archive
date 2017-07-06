@@ -1,0 +1,108 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.header-text h1 {
+  font-size: 400%;
+}
+@media screen and (min-width: 769px) {
+  .navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 300px;
+    text-align: center;
+  }
+  .navbar > .container .navbar-brand-centered,
+  .navbar > .container-fluid .navbar-brand-centered {
+    margin-left: -150px;
+  }
+  .navbar-fixed-top .navbar-brand-centered .logo {
+    position: relative;
+    top: -13px;
+    width: 59px;
+    height: 45px;
+  }
+}
+.vertical-space {
+  height: 25px;
+}
+.vertical-space-sm {
+  height: 10px;
+}
+.bg-human {
+  background-color: #eb4600;
+  color: black;
+}
+.bg-human h1 {
+  color: white;
+}
+.bg-zombie {
+  background-color: #00af04;
+  color: black;
+}
+.bg-zombie h1 {
+  color: white;
+}
+.bg-all {
+  background-color: #3a3a3a;
+}
+.large-text {
+  font-size: 200%;
+}
+.large-text h1 {
+  font-size: 325%;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+a.offset {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+span.hover-text {
+  border-bottom: thin dotted;
+}
+.announcement:hover {
+  cursor: pointer;
+}
+.clickable {
+  cursor: pointer;
+}
+img.game-badge {
+  width: 30px;
+  height: 30px;
+}
+img.game-badge.with-background {
+  background-color: white;
+}
+.btn {
+  border-radius: 0;
+}
+.alert {
+  border-radius: 0;
+}
+.nav-pills > li > a {
+  border-radius: 0;
+}
+.form-control {
+  color: white;
+  background-color: #606060;
+  border-radius: 0;
+}
+.well {
+  border-radius: 0;
+}
+.pager li > a,
+.pager li > span {
+  border-radius: 0;
+}
+.tooltip-inner {
+  border-radius: 0;
+}
+.modal-content {
+  border-radius: 0;
+}
