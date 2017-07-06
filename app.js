@@ -79,6 +79,7 @@ function displayGame(game) {
 
 $(function () {
     registerGame("2015-fall", "2015 Fall");
+    registerGame("2015-spring", "2015 Spring");
 
     var source = $('#content-container').html();
     gameTemplate = Handlebars.compile(source);
