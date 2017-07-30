@@ -1,9 +1,10 @@
 {
   "scores": {
-    "humans": 1,
-    "zombies": 237,
+    "humans": 2,
+    "zombies": 236,
     "winners": [
-      "William Griffith"
+      "William Griffith",
+      "Sean Fitzpatrick"
     ]
   },
   "missions": [
