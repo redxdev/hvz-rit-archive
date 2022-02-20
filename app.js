@@ -78,6 +78,7 @@ function displayGame(game) {
 }
 
 $(function () {
+    registerGame("2021-fall", "2021 Fall");
     registerGame("2019-fall", "2019 Fall")
     registerGame("2019-spring", "2019 Spring")
     registerGame("2018-fall","2018 Fall")
